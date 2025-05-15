@@ -1,24 +1,37 @@
-# README
+**Docker Setup for Ruby on Rails with PostgreSQL**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here's a step-by-step guide to create a Dockerized Ruby on Rails application with PostgreSQL running in a separate container.
 
-Things you may want to cover:
+Step 1: Create a new Rails application (if you don't have one)
+First, let's create a simple Rails app configured for PostgreSQL:
 
-* Ruby version
+bash
+# Create a new Rails app with PostgreSQL as database
+rails new myapp --database=postgresql
+cd myapp
 
-* System dependencies
+Step 2: Create the Dockerfile
 
-* Configuration
+Step 3: Create an entrypoint script
+bash
+chmod +x entrypoint.sh
 
-* Database creation
+Step 4: Create a docker-compose.yml file
 
-* Database initialization
+Step 5: Configure database.yml
 
-* How to run the test suite
+Step 6: Build and run the application
+Run the following commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+bash
+# Build the images
+docker-compose build
 
-* Deployment instructions
+# Create the database
+docker-compose run web rails db:create
 
-* ...
+# Run the application
+docker-compose up
+
+Step 7: Access the application
+Your Rails application will be available at http://localhost:3000

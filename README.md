@@ -1,14 +1,9 @@
-**Docker Setup for Ruby on Rails with PostgreSQL**
+# Docker Setup for Ruby on Rails with PostgreSQL
 
 Here's a step-by-step guide to create a Dockerized Ruby on Rails application with PostgreSQL running in a separate container.
 
 Step 1: Create a new Rails application (if you don't have one)
-First, let's create a simple Rails app configured for PostgreSQL:
-
-bash
-# Create a new Rails app with PostgreSQL as database
-rails new myapp --database=postgresql
-cd myapp
+First, let's create a simple Rails app configured for PostgreSQL
 
 Step 2: Create the Dockerfile
 
